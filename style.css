@@ -386,3 +386,50 @@ span{
         margin-top: 4rem;
     }
 }
+
+/* Ocultar checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Botón hamburguesa */
+.menu-icon {
+  display: none;
+  font-size: 3rem;
+  color: #b74b4b;
+  cursor: pointer;
+  z-index: 101;
+}
+
+/* En pantallas pequeñas */
+@media (max-width: 995px) {
+  .menu-icon {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 60%;
+    background: #161616;
+    border-left: 3px solid #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+    border-bottom-left-radius: 2rem;
+    padding: 2rem;
+  }
+
+  /* Cuando el checkbox está activado → mostrar nav */
+  #menu-toggle:checked ~ nav {
+    display: block;
+  }
+
+  nav a {
+    display: block;
+    font-size: 2rem;
+    margin: 2rem 0;
+  }
+}
+
+
